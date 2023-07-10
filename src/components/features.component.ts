@@ -7,7 +7,7 @@ import { RxLet } from "@rx-angular/template/let";
   standalone: true,
   imports: [RxLet],
   template: `
-    <p>Feaures</p>
+    <p>Feaures (RxLet)</p>
 
     <div *rxLet="count$; let count">
       {{ count }}

@@ -8,7 +8,7 @@ import { AsyncPipe } from "@angular/common";
   standalone: true,
   imports: [LetDirective, AsyncPipe],
   template: `
-    <p>Pricing</p>
+    <p>Pricing (Custom Let)</p>
 
     <div *ngLet="price$ | async as price">{{ price }}€</div>
 
