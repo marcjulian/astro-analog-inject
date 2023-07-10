@@ -1,5 +1,6 @@
 ---
 import { HelloComponent } from "../components/hello.component";
+import { FeaturesComponent } from "../components/features.component";
 
 const helpText = "Helping binding";
 ---
@@ -19,5 +20,9 @@ const helpText = "Helping binding";
 		<HelloComponent client:load />
 		<HelloComponent client:load helpText="Helping" />
 		<HelloComponent client:load helpText={helpText} />
+
+		<FeaturesComponent client:only />
+		<!-- "client_load" throw error: "NG0203: inject() must be called from an injection..."  -->
+		<!-- <FeaturesComponent client:load /> -->
 	</body>
 </html>
