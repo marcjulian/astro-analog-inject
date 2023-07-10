@@ -1,4 +1,7 @@
 ---
+import { HelloComponent } from "../components/hello.component";
+
+const helpText = "Helping binding";
 ---
 
 <html lang="en">
@@ -11,5 +14,10 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+		<!-- "client:load" works for a basic angular component -->
+		<HelloComponent client:load />
+		<HelloComponent client:load helpText="Helping" />
+		<HelloComponent client:load helpText={helpText} />
 	</body>
 </html>
